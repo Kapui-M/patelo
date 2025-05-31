@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Share Community Event"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:id="@+id/eventTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:hint="Event Title"
+            android:background="@drawable/edit_text_bg"
+            android:inputType="text"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"
+            tools:ignore="HardcodedText,VisualLintTextFieldSize" />
+
+
+
+        <EditText
+            android:id="@+id/eventLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:hint="Location"
+            android:background="@drawable/edit_text_bg"
+            android:inputType="text"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"
+            tools:ignore="HardcodedText,VisualLintTextFieldSize" />
+
+        <EditText
+            android:id="@+id/eventDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:hint="Date (e.g. 2025-06-15)"
+            android:background="@drawable/edit_text_bg"
+            android:inputType="datetime"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"
+            tools:ignore="HardcodedText,VisualLintTextFieldSize" />
+
+        <EditText
+            android:id="@+id/eventDescription"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:autofillHints=""
+            android:hint="Description"
+            android:gravity="top"
+            android:background="@drawable/edit_text_bg"
+            android:inputType="text"
+            android:padding="12dp"
+            android:layout_marginBottom="20dp"
+            tools:ignore="HardcodedText,VisualLintTextFieldSize" />
+
+        <ImageView
+            android:id="@+id/eventImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:contentDescription="eventImage"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_add_photo"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/btnShareEvent"
+            android:layout_width="288dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#388E3C"
+            android:padding="12dp"
+            android:text="Share Event"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            tools:ignore="HardcodedText,TextContrastCheck" />
+
+        <TextView
+            android:text="Community Events"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="HardcodedText" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/eventList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+</ScrollView>
+
