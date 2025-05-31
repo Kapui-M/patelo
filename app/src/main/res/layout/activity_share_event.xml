@@ -79,7 +79,7 @@
             android:layout_height="200dp"
             android:contentDescription="eventImage"
             android:scaleType="centerCrop"
-            android:src="@drawable/ic_add_photo"
+            android:src="@android:drawable/ic_menu_camera"
             tools:ignore="HardcodedText" />
 
         <Button

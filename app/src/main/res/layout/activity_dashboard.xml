@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:padding="16dp">
 
     <LinearLayout
@@ -10,72 +12,130 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal">
 
-        <!-- Profile Section -->
-        <ImageView
-            android:id="@+id/profileImage"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/ic_profile"
-            android:contentDescription="@string/profile_img"
-            android:layout_marginBottom="12dp" />
-
         <TextView
-            android:id="@+id/fullNameText"
-            android:text="@string/name"
-            android:textSize="20sp"
+            android:id="@+id/welcomeText"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp"
+            android:text="Welcome to Patelo!"
+            android:textColor="@color/black"
+            android:textSize="22sp"
             android:textStyle="bold"
-            android:layout_marginBottom="4dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            tools:ignore="HardcodedText" />
 
-        <TextView
-            android:id="@+id/accountTypeText"
-            android:text="@string/acc_type"
-            android:textSize="16sp"
-            android:layout_marginBottom="12dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <!-- Quick Action Buttons -->
-        <LinearLayout
-            style="?android:attr/buttonBarStyle"
+        <GridLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginBottom="24dp">
+            android:alignmentMode="alignMargins"
+            android:columnCount="2"
+            android:rowCount="2"
+            android:useDefaultMargins="true">
 
-            <Button
-                android:id="@+id/viewProfileBtn"
-                style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@string/view_Profile" />
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="12dp"
+                android:background="@drawable/dashboard_card_bg">
 
-            <Button
-                android:id="@+id/shareEventBtn"
-                style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="wrap_content"
+                <ImageView
+                    android:id="@+id/profileIcon"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/ic_profile"
+                    android:contentDescription="Profile"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Profile"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@string/share_event"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp" />
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="12dp"
+                android:background="@drawable/dashboard_card_bg">
 
-            <Button
-                android:id="@+id/findConnectionsBtn"
-                style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="wrap_content"
+                <ImageView
+                    android:id="@+id/eventsIcon"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/ic_event"
+                    android:contentDescription="Events"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:layout_width="85dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Events"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@string/find_connections" />
-        </LinearLayout>
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="12dp"
+                android:background="@drawable/dashboard_card_bg">
 
-        <!-- Placeholder for more content -->
-        <TextView
-            android:id="@+id/dashboardStatus"
-            android:text="@string/your_data"
-            android:textSize="16sp"
-            android:layout_marginTop="12dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+                <ImageView
+                    android:id="@+id/connectionsIcon"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/ic_connections"
+                    android:contentDescription="Connections"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Connections"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="12dp"
+                android:background="@drawable/dashboard_card_bg">
+
+                <ImageView
+                    android:id="@+id/messagesIcon"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/ic_message"
+                    android:contentDescription="Messages"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:layout_width="125dp"
+                    android:layout_height="33dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Messages"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+        </GridLayout>
     </LinearLayout>
 </ScrollView>
